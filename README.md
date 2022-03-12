@@ -1,3 +1,3 @@
 # Rishi Shah
 
-Personal webiste for Rishi Shah
+Personal website for Rishi Shah
