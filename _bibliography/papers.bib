@@ -3,113 +3,44 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1920relativity,
-  title     = {Relativity: the Special and General Theory},
-  author    = {Einstein, Albert},
-  year      = {1920},
-  publisher = {Methuen & Co Ltd},
-  html      = {relativity.html}
+@inproceedings{farinaScalingMultiModalMultiTask2025,
+  title             = {Scaling Multi-Modal and Multi-Task Transformers for Small Molecule Drug Discovery},
+  author            = {Farina Jr, David S. and Sirumalla, Sai Krishna and Niesen, Michiel J. M. and Di Cesare, Daniele A. and Farias, Felipe Costa and O'Connor, Michael B. and Pereira de Lacerda, Marcelo Gomes and Dollar, Orion Walker and Bygrave, Peter and Dresselhaus, Thomas and Qiao, Zhuoran and Shah, Rishi and Swails, Jason and Miles, Daniel and Feighan, Oliver and Opalenski, Stephen and Derricotte, Wallace and Munoz, Stephen and Ding, Feizhi and Manby, Fred and Miller, Thomas and Welborn, Matthew},
+  abstract          = {We introduce {Enchant} v2, a large-scale multi-modal transformer for predicting molecular, biochemical, and pharmacological properties from heterogeneous biomedical data. The model addresses a core challenge in drug discovery: generalizing under extreme data sparsity and across incompatible modalities. Diverse inputs including molecular graphs, protein sequences, assay measurements, and free text are represented as unified token sequences processed by a single transformer. Pretraining on a large, curated corpus is followed by parameter-efficient fine-tuning for molecule property prediction. We show that {Enchant} v2 follows established transformer scaling laws, with performance improving predictably as pre-training compute increases. On public and proprietary benchmarks including drug property prediction and internal pharmacology datasets, it consistently outperforms {TxGemma} and {Enchant} v1. Crucially, in real-world applications, {Enchant} v2 surpasses the current industry standard of in vitro screening: for example, it achieves an AUROC of 0.74 in classifying high versus low in vivo rat clearance, compared to 0.51 when extrapolating from measured in vitro clearance values. In addition, the model produces calibrated uncertainty estimates that closely track observed hit rates in virtual screening tasks, enabling reliable hit identification and efficient prioritization of compounds in early discovery workflows. These findings suggest that scalable, modality-agnostic transformers can deliver robust generalization and substantial performance gains in real-world low-data drug discovery settings.},
+  booktitle         = {NeurIPS 2025 Workshop on AI for Science},
+  year              = {2025},
+  url               = {https://openreview.net/forum?id=nxEulra7Ja},
+  pdf               = {https://openreview.net/pdf?id=nxEulra7Ja},
+  selected          = {true}
 }
 
-@book{einstein1956investigations,
-  bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+@article{moradiClinicallyInformedSemisupervised2025,
+  title             = {Clinically Informed Semi-Supervised Learning Improves Disease Annotation and Equity from Electronic Health Records: A Glaucoma Case Study},
+  author            = {Moradi, Mousa and Shah, Rishi and Fujita, Asahi and Bineshfar, Niloufar and Vu, Daniel M. and Aziz, Kanza and Liebman, Daniel L. and Hashemabad, Saber Kazeminasab and Wang, Mengyu and Elze, Tobias and Eslami, Mohammad and Zebardast, Nazlee},
+  abstract          = {Clinical notes represent a vast but underutilized source of information for disease characterization, whereas structured electronic health record (EHR) data such as ICD codes are often noisy, incomplete, and too coarse to capture clinical complexity. These limitations constrain the accuracy of datasets used to investigate disease pathogenesis and progression and to develop robust artificial intelligence (AI) systems. To address this challenge, we introduce Ci-SSGAN (Clinically Informed Semi-Supervised Generative Adversarial Network), a novel framework that leverages large-scale unlabeled clinical text to reannotate patient conditions with improved accuracy and equity. As a case study, we applied Ci-SSGAN to glaucoma, a leading cause of irreversible blindness characterized by pronounced racial and ethnic disparities. Trained on a demographically balanced subset of 349587 unlabeled ophthalmology notes and 2954 expert-annotated notes (drawn from an institutional corpus of 2.1 million notes), Ci-SSGAN achieved 0.85 accuracy and 0.95 AUROC, representing a 10.19\% AUROC improvement compared to ICD-based labels (0.74 accuracy, 0.85 AUROC). Ci-SSGAN also narrowed subgroup performance gaps, with F1 gains for Black patients (+0.05), women (+0.06), and younger patients (+0.033). By integrating semi-supervised learning and demographic conditioning, Ci-SSGAN minimizes reliance on expert annotations, making AI development more accessible to resource-constrained healthcare systems.},
+  journal           = {npj Digital Medicine},
+  publisher         = {Nature Publishing Group},
+  year              = {2025},
+  month             = {Dec},
+  volume            = {9},
+  issue             = {1},
+  pages             = {82},
+  doi               = {10.1038/s41746-025-02267-w},
+  issn              = {2398-6352},
+  selected          = {true}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
-  bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
-  volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
+@article{Shah2025.06.08.25329151,
+  title             = {{OphthaBERT}: Automated Glaucoma Diagnosis from Clinical Notes},
+  author            = {Shah, Rishi and Moradi, Mousa and Eslami, Sedigheh and Fujita, Asahi and Aziz, Kanza and Bineshfar, Niloufar and Elze, Tobias and Eslami, Mohammad and Kazeminasab, Saber and Liebman, Daniel and Rasouli, Saeid and Vu, Daniel and Wang, Mengyu and Yohannan, Jithin and Zebardast, Nazlee},
+  abstract          = {Glaucoma is a leading cause of irreversible blindness worldwide, with early intervention often being crucial. Research into the underpinnings of glaucoma often relies on electronic health records (EHRs) to identify patients with glaucoma and their subtypes. However, current methods for identifying glaucoma patients from EHRs are often inaccurate or infeasible at scale, relying on International Classification of Diseases (ICD) codes or manual chart reviews. To address this limitation, we introduce (1) OphthaBERT, a powerful general clinical ophthalmology language model trained on over 2 million diverse clinical notes, and (2) a fine-tuned variant of OphthaBERT that automatically extracts binary and subtype glaucoma diagnoses from clinical notes. The base OphthaBERT model is a robust encoder, outperforming state-of-the-art clinical encoders in masked token prediction on out-of-distribution ophthalmology clinical notes and binary glaucoma classification with limited data. We report significant binary classification performance improvements in low-data regimes (p < 0.001, Bonferroni corrected). OphthaBERT is also able to achieve superior classification performance for both binary and subtype diagnosis, outperforming even fine-tuned large decoder-only language models at a fraction of the computational cost. We demonstrate a 0.23-point increase in macro-F1 for subtype diagnosis over ICD codes and strong binary classification performance when externally validated at Wilmer Eye Institute. OphthaBERT provides an interpretable, equitable framework for general ophthalmology language modeling and automated glaucoma diagnosis.},
+  journal           = {medRxiv},
+  publisher         = {Cold Spring Harbor Laboratory Press},
+  year              = {2025},
+  month             = {Jun},
+  elocation-id      = {2025.06.08.25329151},
+  doi               = {10.1101/2025.06.08.25329151},
+  url               = {https://www.medrxiv.org/content/early/2025/06/09/2025.06.08.25329151.full.pdf},
+  selected          = {true}
 }
 
-@article{PhysRev.47.777,
-  abbr              = {PhysRev},
-  title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract          = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal           = {Phys. Rev.},
-  location          = {New Jersey},
-  volume            = {47},
-  issue             = {10},
-  pages             = {777--780},
-  numpages          = {0},
-  year              = {1935},
-  month             = {May},
-  publisher         = aps,
-  doi               = {10.1103/PhysRev.47.777},
-  url               = {https://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html              = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf               = {example_pdf.pdf},
-  altmetric         = {248277},
-  dimensions        = {true},
-  google_scholar_id = {qyhmnyLat1gC},
-  video             = {https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info   = {. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation        = {* Example use of superscripts<br>† Albert Einstein},
-  selected          = {true},
-  inspirehep_id     = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
-}
-
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
-}
-
-@article{einstein1905photoelectriceffect,
-  bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
-}
